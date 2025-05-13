@@ -1,6 +1,6 @@
 /*
 -부모로부터 posts, onSelectPost, selectedPostId를 props로 받음
-포스트 목록을 표시하고 선택 이벤트를 부모에게 전달
+-포스트 목록을 표시하고 선택 이벤트를 부모에게 전달
  */
 
 import { BlogListProps } from '@/types/blog';

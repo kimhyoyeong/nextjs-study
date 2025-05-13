@@ -1,6 +1,6 @@
 /*
 -부모로부터 post를 props로 받음
-선택된 포스트의 상세 내용을 표시
+-선택된 포스트의 상세 내용을 표시
  */
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { BlogDetailProps } from '@/types/blog';
