@@ -14,6 +14,7 @@ import { BlogPost } from '@/types/blog';
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
+  //블로그 포스트 목록 더미 데이터
   const posts: BlogPost[] = [
     {
       id: 1,
