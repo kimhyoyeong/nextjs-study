@@ -1,5 +1,11 @@
 'use client';
 
+/*
+-최상위 컴포넌트로, 전체 블로그 페이지의 레이아웃을 담당
+-상태 관리 (selectedPost, posts)를 담당
+-자식 컴포넌트들에게 필요한 props를 전달
+ */
+
 import { useState } from 'react';
 import BlogList from '@/app/_components/blog/BlogList';
 import BlogDetail from '@/app/_components/blog/BlogDetail';
