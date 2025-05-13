@@ -1,5 +1,3 @@
-'use client';
-
 import { BlogListProps } from '@/types/blog';
 
 export default function BlogList({ posts, onSelectPost, selectedPostId }: BlogListProps) {
