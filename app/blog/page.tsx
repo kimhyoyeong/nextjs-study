@@ -14,7 +14,7 @@ import { BlogPost } from '@/types/blog';
 export default function Blog() {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
-  const [posts] = useState<BlogPost[]>([
+  const posts: BlogPost[] = [
     {
       id: 1,
       title: 'Next.js 시작하기',
@@ -36,7 +36,7 @@ export default function Blog() {
       createdAt: '2024-03-18',
       author: 'Admin',
     },
-  ]);
+  ];
 
   const handleSelectPost = (postId: number | null) => {
     console.log('postId', postId);

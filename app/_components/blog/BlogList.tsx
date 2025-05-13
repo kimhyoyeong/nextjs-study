@@ -11,7 +11,10 @@ export default function BlogList({ posts, onSelectPost, selectedPostId }: BlogLi
       {posts.map((post) => (
         <button
           key={post.id}
-          onClick={() => onSelectPost(selectedPostId === post.id ? null : post.id)}
+          onClick={() => {
+            const isSelected = selectedPostId === post.id;
+            onSelectPost(isSelected ? null : post.id);
+          }}
           className={`w-full rounded-lg border p-3 text-left hover:bg-gray-100 ${
             selectedPostId === post.id ? 'bg-gray-100' : ''
           }`}
