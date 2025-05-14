@@ -1,5 +1,4 @@
 'use client';
-
 /*
 -최상위 컴포넌트로, 전체 블로그 페이지의 레이아웃을 담당
 -상태 관리 (selectedPost, posts)를 담당

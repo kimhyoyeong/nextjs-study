@@ -12,9 +12,8 @@ export default function BlogList({ posts, onSelectPost, selectedPostId }: BlogLi
         <button
           key={post.id}
           onClick={() => {
-            const isSelected = selectedPostId === post.id;
-            console.log('SELECTED:', isSelected);
-            onSelectPost(isSelected ? null : post.id);
+            const isSelected = selectedPostId === post.id; // 지금 클릭한 게시글이 이미 선택된 상태인지 확인
+            onSelectPost(isSelected ? null : post.id); //이미 선택되어 있으면 null 넘겨서 선택 해제, 아니면 post.id 넘겨서 선택
           }}
           className={`w-full rounded-lg border p-3 text-left hover:bg-gray-100 ${
             selectedPostId === post.id ? 'bg-gray-100' : ''
