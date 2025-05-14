@@ -13,6 +13,7 @@ export default function BlogList({ posts, onSelectPost, selectedPostId }: BlogLi
           key={post.id}
           onClick={() => {
             const isSelected = selectedPostId === post.id;
+            console.log('SELECTED:', isSelected);
             onSelectPost(isSelected ? null : post.id);
           }}
           className={`w-full rounded-lg border p-3 text-left hover:bg-gray-100 ${
