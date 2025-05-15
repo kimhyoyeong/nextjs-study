@@ -6,8 +6,8 @@
  */
 
 import { useState } from 'react';
-import BlogList from '@/app/_components/blog/BlogList';
-import BlogDetail from '@/app/_components/blog/BlogDetail';
+import BlogList from '@/app/blog/_components/BlogList';
+import BlogDetail from '@/app/blog/_components/BlogDetail';
 import { BlogPost } from '@/types/blog';
 
 export default function Blog() {

@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ProductList } from '@/app/_components/cart/ProductList';
-import { Cart } from '@/app/_components/cart/Cart';
+import { ProductList } from '@/app/cart/_components/ProductList';
+import { Cart } from '@/app/cart/_components/Cart';
 import { Product } from '@/types/cart';
 
 const products: Product[] = [
