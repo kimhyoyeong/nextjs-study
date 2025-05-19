@@ -11,12 +11,6 @@ export default function Home() {
         >
           Blog
         </Link>
-        <Link
-          href="/cart"
-          className="rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-600"
-        >
-          Cart
-        </Link>
       </nav>
     </main>
   );
