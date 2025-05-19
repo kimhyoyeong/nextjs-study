@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BlogDetailProps } from '@/types/blog';
-
-export default function Detail({ post }: BlogDetailProps) {
+import { BlogPost } from '@/types/blog';
+interface DetailProps {
+  post: BlogPost;
+}
+export default function Detail({ post }: DetailProps) {
   return (
     <Card className="animate-fade-in">
       <CardHeader>

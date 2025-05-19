@@ -5,7 +5,3 @@ export interface BlogPost {
   date: string;
   slug: string;
 }
-
-export interface BlogDetailProps {
-  post: BlogPost;
-}
