@@ -2,8 +2,8 @@ import { BlogPost } from '@/types/blog';
 
 interface ListProps {
   posts: BlogPost[];
-  onSelectPost: (postId: number | null) => void;
-  selectedPostId: number | null;
+  onSelectPost: (postId: string | null) => void;
+  selectedPostId: string | null;
 }
 
 export default function List({ posts, onSelectPost, selectedPostId }: ListProps) {

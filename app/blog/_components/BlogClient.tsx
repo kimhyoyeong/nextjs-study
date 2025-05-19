@@ -12,7 +12,7 @@ interface BlogClientProps {
 export default function BlogClient({ initialPosts }: BlogClientProps) {
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
 
-  const handleSelectPost = (postId: number | null) => {
+  const handleSelectPost = (postId: string | null) => {
     if (postId === null) {
       setSelectedPost(null);
     } else {
