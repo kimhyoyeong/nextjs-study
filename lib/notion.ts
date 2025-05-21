@@ -30,6 +30,10 @@ export const getPublishedPosts = async (): Promise<BlogPost[]> => {
           properties.Tags?.type === 'multi_select'
             ? properties.Tags.multi_select.map((tag) => tag.name)
             : [],
+        slug:
+          properties.Slug.type === 'rich_text'
+            ? (properties.Slug.rich_text[0]?.plain_text ?? '')
+            : '',
       };
     });
 };
