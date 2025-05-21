@@ -15,7 +15,7 @@ export default async function BlogPost({ params }: Props) {
   console.log(post);
 
   if (!post) {
-    return notFound(); // ✅ 필수
+    return notFound();
   }
 
   return <BlogDetail post={post} />;
