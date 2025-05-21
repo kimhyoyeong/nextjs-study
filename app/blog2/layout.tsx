@@ -1,5 +1,5 @@
 import { getPublishedPosts } from '@/lib/notion';
-import BlogList from './_components/BlogList';
+import BlogList from './_components/BlogList.client';
 
 export default async function BlogLayout({ children }: { children: React.ReactNode }) {
   const posts = await getPublishedPosts();
