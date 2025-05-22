@@ -8,6 +8,7 @@ export default async function BlogLayout({ children }: { children: React.ReactNo
   return (
     <div className="flex min-h-screen">
       <aside className="w-1/3 border-r p-4">
+        <h1 className="mb-4 text-2xl font-bold">Blog Posts</h1>
         <List posts={posts} />
       </aside>
       <main className="flex-1 p-4">{children}</main>

@@ -10,7 +10,7 @@ interface ListProps {
 
 export default function List({ posts }: ListProps) {
   const pathname = usePathname();
-  const isBlogRoot = pathname === '/blog3';
+  const isBlogRoot = pathname === '/blog4';
   const currentSlug = isBlogRoot ? null : pathname.split('/').pop();
 
   return (
