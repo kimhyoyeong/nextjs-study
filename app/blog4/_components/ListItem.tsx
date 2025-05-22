@@ -8,6 +8,7 @@ interface ListItemProps {
 }
 
 const ListItem = memo(function ListItem({ post, isActive }: ListItemProps) {
+  console.log('렌더링됨:', post.slug, isActive);
   return (
     <Link
       href={isActive ? '/blog4' : `/blog4/${post.slug}`}

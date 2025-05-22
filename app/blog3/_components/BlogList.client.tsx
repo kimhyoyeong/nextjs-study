@@ -28,7 +28,7 @@ const ListItem = memo(function ListItem({ post, isActive }: ListItemProps) {
   console.log('렌더링됨:', post.slug, isActive);
   return (
     <Link
-      href={isActive ? '/blog2' : `/blog2/${post.slug}`}
+      href={isActive ? '/blog3' : `/blog3/${post.slug}`}
       className={`block w-full rounded-lg border p-4 text-left transition-colors hover:bg-gray-50 ${
         isActive ? 'border-blue-500 bg-blue-50' : 'border-gray-200'
       }`}>
@@ -45,7 +45,7 @@ interface ListProps {
 export default function List({ posts }: ListProps) {
   const pathname = usePathname();
 
-  const isBlogRoot = pathname === '/blog';
+  const isBlogRoot = pathname === '/blog3';
   const currentSlug = isBlogRoot ? null : pathname.split('/').pop();
 
   return (
