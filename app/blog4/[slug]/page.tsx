@@ -2,8 +2,13 @@ import { getPublishedPosts } from '@/lib/notion';
 import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-export default async function PostDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+interface PostDetailPageProps {
+  params: Promise<{ slug: string }>;
+}
+
+export default async function PostDetailPage({ params }: PostDetailPageProps) {
   const { slug } = await params;
+
   const posts = await getPublishedPosts();
   const post = posts.find((post) => post.slug === slug);
 
