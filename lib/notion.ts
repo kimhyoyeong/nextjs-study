@@ -7,6 +7,8 @@ const notion = new Client({
 });
 
 export const getPublishedPosts = async (): Promise<BlogPost[]> => {
+  console.log('🔁 Notion API 호출됨'); // 👈 여기에 찍어봐!
+
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     filter: { property: 'Status', select: { equals: 'Published' } },
@@ -19,21 +21,11 @@ export const getPublishedPosts = async (): Promise<BlogPost[]> => {
       const { properties } = page;
       return {
         id: page.id,
-        title:
-          properties.Title.type === 'title' ? (properties.Title.title[0]?.plain_text ?? '') : '',
-        description:
-          properties.Description.type === 'rich_text'
-            ? (properties.Description.rich_text[0]?.plain_text ?? '')
-            : '',
+        title: properties.Title.type === 'title' ? (properties.Title.title[0]?.plain_text ?? '') : '',
+        description: properties.Description.type === 'rich_text' ? (properties.Description.rich_text[0]?.plain_text ?? '') : '',
         date: properties.Date.type === 'date' ? (properties.Date.date?.start ?? '') : '',
-        tags:
-          properties.Tags?.type === 'multi_select'
-            ? properties.Tags.multi_select.map((tag) => tag.name)
-            : [],
-        slug:
-          properties.Slug.type === 'rich_text'
-            ? (properties.Slug.rich_text[0]?.plain_text ?? '')
-            : '',
+        tags: properties.Tags?.type === 'multi_select' ? properties.Tags.multi_select.map((tag) => tag.name) : [],
+        slug: properties.Slug.type === 'rich_text' ? (properties.Slug.rich_text[0]?.plain_text ?? '') : '',
       };
     });
 };
