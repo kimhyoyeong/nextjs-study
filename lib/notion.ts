@@ -7,13 +7,13 @@ const notion = new Client({
 });
 
 export const getPublishedPosts = async (): Promise<BlogPost[]> => {
-  console.log('🔁 Notion API 호출됨'); // 👈 여기에 찍어봐!
-
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DATABASE_ID!,
     filter: { property: 'Status', select: { equals: 'Published' } },
     sorts: [{ property: 'Date', direction: 'descending' }],
   });
+
+  console.log('🔁 Notion API 호출됨', response.results); // 👈 여기에 찍어봐!
 
   return response.results
     .filter((page): page is PageObjectResponse => 'properties' in page)

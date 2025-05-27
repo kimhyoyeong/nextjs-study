@@ -9,6 +9,8 @@ interface PostDetailPageProps {
 export default async function PostDetailPage({ params }: PostDetailPageProps) {
   const { slug } = await params;
 
+  console.log('🔁 PostDetailPage 호출됨', slug);
+
   const posts = await getPublishedPosts();
   const post = posts.find((post) => post.slug === slug);
 
