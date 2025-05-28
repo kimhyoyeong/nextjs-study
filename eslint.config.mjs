@@ -23,7 +23,7 @@ const eslintConfig = [
       },
     },
     rules: {
-      'no-unused-vars': 'warn', // 사용되지 않는 변수에 대해 경고만 표시 (에러는 아님)
+      //'no-unused-vars': 'warn', // 사용되지 않는 변수에 대해 경고만 표시 (에러는 아님)
       //'no-console': 'warn', // console 사용에 대해서도 경고만 표시
     },
   },
