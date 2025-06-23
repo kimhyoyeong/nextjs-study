@@ -58,8 +58,8 @@ export default function ServerVsClientPage() {
               </tr>
               <tr className="bg-gray-50">
                 <td className="border border-gray-300 p-3 font-medium">사용 예시</td>
-                <td className="border border-gray-300 p-3">초기 데이터 로딩, 리스트 출력</td>
-                <td className="border border-gray-300 p-3">탭, 버튼, 모달 등 UI 인터랙션 처리</td>
+                <td className="border border-gray-300 p-3">정적 콘텐츠 (블로그 리스트, 상품 목록 등) </td>
+                <td className="border border-gray-300 p-3">인터랙티브 기능(탭, 버튼, 모달 등 UI 인터랙션 처리)</td>
               </tr>
             </tbody>
           </table>
